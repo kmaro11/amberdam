@@ -1,0 +1,35 @@
+@layer base {
+    @font-face {
+        font-family: Arial;
+        font-weight: 400;
+        src: url(/fonts/arial.ttf) format("ttf");
+    }
+    @font-face {
+        font-family: Arial;
+        font-weight: 700;
+        src: url(/fonts/arial-bold.TTF) format("TTF");
+    }
+    @font-face {
+        font-family: Arial;
+        font-weight: 400;
+        font-style: italic;
+        src: url(/fonts/arial-italic.TTF) format("TTF");
+    }
+
+    @font-face {
+        font-family: Arial;
+        font-weight: 400;
+        src: url(/fonts/TimesNewerRoman-Regular.otf) format("otf");
+    }
+    @font-face {
+        font-family: Arial;
+        font-weight: 700;
+        src: url(/fonts/TimesNewerRoman-Bold.otf) format("otf");
+    }
+    @font-face {
+        font-family: Arial;
+        font-weight: 400;
+        font-style: italic;
+        src: url(/fonts/TimesNewerRoman-Italic.otf) format("otf");
+    }
+}

@@ -1,8 +1,8 @@
 tailwind.config = {
     theme: {
         fontFamily: {
-            sans: ["Space Grotesk", "sans-serif"],
-            mono: ["Space Mono", "monospace"]
+            'arial': ['Arial', 'sans-serif'],
+            'times': ['Times New Roman', 'sans-serif']
         },
         extend: {
             fontSize: {
@@ -26,7 +26,7 @@ tailwind.config = {
 
                 },
                 black: {
-                    DEFAULT: "#222222"
+                    DEFAULT: "#000000",
                 },
                 grey: {
                     DEFAULT: "#8F99AC",
