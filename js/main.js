@@ -15,6 +15,10 @@ tailwind.config = {
                     light: "#DD5130",
                     lighter: "#F08B8B"
                 },
+                orange: {
+                    DEFAULT: "#EA690B",
+                    lighter: "#FBE1CE"
+                },
                 yellow: {
                     DEFAULT: "#E5D117",
                     light: "#E7DB75"
@@ -40,3 +44,12 @@ tailwind.config = {
         }
     }
 }
+
+const menuButton = document.querySelectorAll('[data-open-menu]');
+const menu = document.querySelector('[data-menu]');
+
+menuButton.forEach(button => {
+    button.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    })
+})

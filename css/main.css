@@ -1,0 +1,55 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+
+.amber-container {
+    max-width: 1156px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+    .amber-container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+.button {
+    border: 1px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 39px;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+.button-black {
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--black);
+}
+
+.button-white {
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--black);
+}
+.amber-menu {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.amber-menu.active {
+    transform: translateY(0);
+    position: fixed;
+    opacity: 100%;
+    pointer-events: auto;
+}
