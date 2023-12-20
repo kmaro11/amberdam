@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/png" href="static/icons/favicon.png"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css" type="text/tailwind">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Amberdam</title>
+</head>
+<body>
+
+<header class="absolute w-max left-1/2 -translate-x-1/2 p-4 md:px-16 md:py-9 z-20 w-full flex justify-center items-center h-[82px] md:h-[122px]">
+    <a href="landing.html">
+        <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
+    </a>
+</header>
+<nav class="md:sticky md:top-0 z-10">
+    <div class="flex justify-between p-4 md:px-16 md:py-9 items-center">
+        <button class="max-w-[50px] w-full">
+            <img src="static/svg/shop.svg" alt="basket" class="w-full">
+        </button>
+
+        <button class="max-w-[50px] w-full" data-open-menu>
+            <img src="static/svg/menu.svg" alt="menu" class="w-full">
+        </button>
+    </div>
+    <div class="amber-menu duration-300 inset-0 z-10 w-full h-full bg-white" data-menu>
+        <div class="flex justify-between p-4 md:px-16 md:py-9 items-center">
+            <button class="max-w-[50px] w-full">
+                <img src="static/svg/shop.svg" alt="basket" class="w-full">
+            </button>
+            <a href="landing.html">
+                <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
+            </a>
+            <button class="max-w-[50px] w-full" data-open-menu>
+                <img src="static/svg/close.svg" alt="close menu" class="w-full">
+            </button>
+        </div>
+        <div class="mt-[123px] md:mt-[79px] flex overflow-y-auto">
+            <div class="hidden lg:block w-1/2 flex-grow-1"></div>
+            <div class="w-full lg:w-1/2 flex-grow-1 md:border-l border-black text-black px-4 md:px-16 lg:pl-[10%] ">
+                <ul class="mb-[73px] md:mb-[121px]">
+                    <li class="mb-8">
+                        <a href="landing.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Products</a>
+                    </li>
+                    <li class="mb-8">
+                        <a href="about-us.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
+                            ABOUT<span class="font-times italic lowercase">us</span>
+                        </a>
+                    </li>
+                    <li class="mb-8">
+                        <a href="sustainability.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Sustainability</a>
+                    </li>
+                    <li>
+                        <a href="why-amber.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
+                            <span class="font-times italic capitalize">Why</span>amber
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex gap-x-4">
+                    <a class="button button-black sm:max-w-max px-4 lg:px-9">BECOME A RESELLER</a>
+                    <a class="button button-white sm:max-w-max px-4 lg:px-9">DOWNLOAD CATALOG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="fixed inset-0 z-30 w-full h-full bg-black/60 flex justify-center items-center">
+    <div class="reseller-modal bg-black text-white px-7 pt-[25px] pb-7 max-w-[438px] w-full">
+        <div class="flex justify-between items-start mb-12">
+            <h2 class="text-[50px] uppercase font-arial leading-normal">
+                Become <span class="font-times italic lowercase inline">are</span>seller
+            </h2>
+            <button>
+                <img src="static/svg/close-white.svg" alt="close modal">
+            </button>
+        </div>
+        <form>
+
+            <div class="pt-5 mb-12 flex">
+                <div class="bg-black relative rounded-full w-5 h-5 flex-shrink-0 border border-white border-[4px] flex items-center justify-center">
+                    <div class="bg-orange w-2 h-2 rounded-full"></div>
+                    <input id="policy" type="checkbox" class="w-full opacity-0 absolute h-full">
+                </div>
+                <label for="policy">I agree to privacy policy and terms and conditions</label>
+            </div>
+            <div class="flex justify-end w-full">
+                <button class="button button-black-hallow max-w-max px-[50px]">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section class="amber-container pt-[123px] md:pt-[108px] pb-[90px] md:pb-[100px]">
+    <div class="max-w-[829px] mx-auto mb-6 md:mb-[47px]">
+        <h1 class="font-arial text-subtitle md:text-[64px] uppercase text-center">
+            <span class="font-times italic capitalize inline">Second</span><br class="block md:hidden">
+            generation Baltic Amber maker
+        </h1>
+    </div>
+    <div class="w-full mb-[34px] md:mb-11">
+        <img src="static/images/dune.png" alt="dune" class="w-full">
+    </div>
+    <div class="max-w-[550px] w-full">
+        <p class="text-[15px] leading-[22.5px] font-arial">
+            We take pride in being second-generation amber makers hailing from the charming Lithuanian coastal town of
+            Nida,
+            nestled by the Curonian Lagoon. Our roots run deep in this scenic locale.
+        </p>
+    </div>
+</section>
+
+<section class="amber-container flex justify-end pb-[172px] md:pb-[200px]">
+    <div class="max-w-[649px] w-full">
+        <img src="static/images/men.png" alt="image" class="w-full mb-[34px] md:mb-12">
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            Meet Algimantas, our lead amber maker, whose expertise extends back to 2006, while his family members
+            started working with the Baltic gem back in 1970. With a passion for sustainable amber processing, he has
+            successfully showcased our production technology at various amber and gem expos across Europe and the US.
+            Algimantas embodies our commitment to not just creating exquisite amber pieces but doing so in a way that
+            respects the environment and meets the highest standards of production ethics.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            Algimantas, devoted sixteen years to the amber business, seeking innovative ways to utilize amber remnants
+            intelligently. The distinctive Amberdam bracelets emerge as a testament to his commitment to sustainable
+            fashion and eco-conscious practices. These products are meticulously crafted from natural Lithuanian amber
+            fragments, utilizing a patented pressing technology prevalent in the amber industry.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            The process involves transforming secondary raw materials, such as small amber pieaces, into refined amber
+            strips. The amber particles undergo a precise compression technique, resulting in a versatile material that
+            is later cut, shaped, polished, and formed into stylish artwork. What sets Amberdam apart is its commitment
+            to maintaining the natural color of naturally mechanically treated amber, without the use of any chemical
+            additives.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            Algimantas actively oversees the entire technological process in his workshop in Nida, Lithuania. His
+            dedication extends to ensuring that every stage of the bracelet creation, all twelve of them, adheres to
+            eco-friendly practices. This cyclical approach, where leftovers are repurposed, aligns with Algimantas's
+            vision of using natural resources rationally and minimizing waste.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            The appeal of Amberdam extends beyond fashion; it represents a shift towards sustainable living. In
+            Algimantas's view, sustainable fashion, particularly recycled material accessories, is gaining popularity in
+            Europe. Cities like Berlin, Amsterdam, Stockholm showcase boutiques featuring accessories crafted from
+            recycled materials, and many more are adopting this philosophy.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            The minimalist design of Amberdam bracelets makes them versatile, complementing various outfits and
+            appealing to a broad audience, irrespective of age or gender. Algimantas's ambition goes beyond creating
+            stylish accessories; he envisions a broader cultural shift towards conscious consumption and sustainable
+            fashion practices.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            To further promote this ethos, Amberdam has collaborated with "Audimas" to integrate black bracelets into
+            Lithuania's Olympic team apparel. Beyond being fashionable accessories, these bracelets symbolize national
+            support, strengthen the sense of national identity, and foster a community spirit.
+        </p>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+            Amidst the rising popularity of Amberdam, Algimantas remains passionate about the idea that fashion is not
+            merely an object but a way of life. His endeavor to make recycled material accessories a fashionable
+            phenomenon is not just a business pursuit; it's a movement towards a more sustainable and eco-conscious
+            future.
+        </p>
+    </div>
+
+</section>
+
+<section class="pb-[169px] md:pb-[245px] amber-container">
+    <div class="max-w-[829px] mx-auto flex items-center flex-col">
+        <h2 class="font-arial text-subtitle md:text-[64px] uppercase mb-[18px] text-center">
+            BECOME <span class="font-times italic lowercase inline">a</span>RESELLER</h2>
+        <p class="text-[15px] leading-[22.5px] font-arial mb-10 text-center">
+            Embrace the elegance of Black Baltic Sea Amber and elevate your business with a touch of timeless beauty.
+            Join
+            us on this exciting venture, and let's create lasting impressions together!
+        </p>
+        <a href="" class="button button-black max-w-max px-[50px] mx-auto">SIGN UP</a>
+    </div>
+</section>
+
+<footer class="py-9 amber-container bg-white flex flex-col justify-center items-center">
+    <div class="flex mb-[51px]">
+        <a href="" class="pr-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black">Amber
+            production</a>
+        <a href="" class="px-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black">Privacy policy</a>
+        <a href="" class="pl-5 font-arial text-[10px] leading-[15px] uppercase">Contact us</a>
+    </div>
+    <div class="font-arial text-[10px] leading-[15px] uppercase">AmBERDAM, 2023</div>
+</footer>
+</body>
+</html>
+<script src="js/main.js"></script>

@@ -1,11 +1,13 @@
 :root {
     --black: #000000;
     --white: #ffffff;
+    --orange: #EA690B;
+    --orange-lighter: #FBE1CE;
 }
 
 .amber-container {
-    max-width: 1156px;
-    width: 90%;
+    max-width: 1284px;
+    padding: 0 64px;
     margin: 0 auto;
 }
 
@@ -15,6 +17,8 @@
         padding: 0 16px;
     }
 }
+
+/*buttons*/
 
 .button {
     border: 1px solid var(--black);
@@ -28,6 +32,7 @@
     font-family: Arial, sans-serif;
     width: 100%;
     text-align: center;
+    transition: all .3s ease;
 }
 
 .button-black {
@@ -36,16 +41,50 @@
     border: 1px solid var(--black);
 }
 
+.button-black:focus,
+.button-black:active,
+.button-black:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.button-black-hallow {
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--white);
+}
+
+.button-black-hallow:focus,
+.button-black-hallow:active,
+.button-black-hallow:hover {
+    color: var(--white);
+    background: rgba(234, 105, 11, 0.20);
+    border-color: var(--orange);
+}
+
+
 .button-white {
     color: var(--black);
     background: var(--white);
     border: 1px solid var(--black);
 }
+
+.button-white:focus,
+.button-white:active,
+.button-white:hover {
+    background: var(--orange-lighter);
+    border-color: var(--orange);
+}
+
+
+
+/*menu*/
 .amber-menu {
     position: fixed;
     opacity: 0;
     pointer-events: none;
 }
+
 
 .amber-menu.active {
     transform: translateY(0);
