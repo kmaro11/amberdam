@@ -47,7 +47,13 @@ tailwind.config = {
 
 const menuButton = document.querySelectorAll('[data-open-menu]');
 const menu = document.querySelector('[data-menu]');
+const menuItems = menu.querySelectorAll('li')
 
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.classList.remove('active');
+    })
+})
 menuButton.forEach(button => {
     button.addEventListener('click', () => {
         menu.classList.toggle('active');

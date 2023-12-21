@@ -13,23 +13,25 @@
 </head>
 <body>
 
-<header class="absolute w-max left-1/2 -translate-x-1/2 p-4 md:px-16 md:py-9 z-20 w-full flex justify-center items-center h-[82px] md:h-[122px]">
+<!--header-->
+<!--header-->
+<header class="absolute w-max left-1/2 -translate-x-1/2 p-4 md:px-16 md:py-7 z-20 w-full flex justify-center items-center h-[82px] md:h-[122px]">
     <a href="landing.html">
         <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
     </a>
 </header>
-<nav class="md:sticky md:top-0 z-10">
-    <div class="flex justify-between p-4 md:px-16 md:py-9 items-center">
-        <button class="max-w-[50px] w-full">
+<nav class="md:sticky md:top-0 z-30">
+    <div class="flex justify-between p-4 md:px-16 md:py-7 items-center">
+        <a href="landing.html#products" class="max-w-[50px] w-full">
             <img src="static/svg/shop.svg" alt="basket" class="w-full">
-        </button>
+        </a>
 
         <button class="max-w-[50px] w-full" data-open-menu>
             <img src="static/svg/menu.svg" alt="menu" class="w-full">
         </button>
     </div>
     <div class="amber-menu duration-300 inset-0 z-10 w-full h-full bg-white" data-menu>
-        <div class="flex justify-between p-4 md:px-16 md:py-9 items-center">
+        <div class="flex justify-between p-4 md:px-16 md:py-7 items-center">
             <button class="max-w-[50px] w-full">
                 <img src="static/svg/shop.svg" alt="basket" class="w-full">
             </button>
@@ -45,33 +47,242 @@
             <div class="w-full lg:w-1/2 flex-grow-1 md:border-l border-black text-black px-4 md:px-16 lg:pl-[10%] ">
                 <ul class="mb-[73px] md:mb-[121px]">
                     <li class="mb-8">
-                        <a href="" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Products</a>
+                        <a href="landing.html#products"
+                           class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Products</a>
                     </li>
                     <li class="mb-8">
-                        <a href="" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
+                        <a href="about-us.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
                             ABOUT<span class="font-times italic lowercase">us</span>
                         </a>
                     </li>
                     <li class="mb-8">
-                        <a href="" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Sustainability</a>
+                        <a href="sustainability.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Sustainability</a>
                     </li>
-                    <li class="">
-                        <a href="" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
+                    <li>
+                        <a href="why-amber.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
                             <span class="font-times italic capitalize">Why</span>amber
                         </a>
                     </li>
                 </ul>
                 <div class="flex gap-x-4">
-                    <a href="" class="button button-black sm:max-w-max px-4 lg:px-9">BECOME A RESELLER</a>
-                    <a href="" class="button button-white sm:max-w-max px-4 lg:px-9">DOWNLOAD CATALOG</a>
+                    <a class="button button-black sm:max-w-max px-4 lg:px-9" data-modal-target="reseller-modal">
+                        BECOME A RESELLER
+                    </a>
+                    <a class="button button-white sm:max-w-max px-4 lg:px-9" data-modal-target="catalog-modal">
+                        DOWNLOAD CATALOG
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
+<!--modals-->
+<div class="reseller-modal fixed h-0 opacity-0 pointer-events-none inset-0 z-40 w-full h-full bg-black/60 flex justify-center items-center">
+    <button class="md:hidden w-10 absolute right-4 top-4" data-close-modal="reseller-modal">
+        <img src="static/svg/close-white.svg" alt="close modal">
+    </button>
+    <div class="flex flex-col justify-center h-full md:h-auto bg-black text-white px-7 pt-[25px] pb-7 max-w-[438px] w-full">
+        <div class="flex justify-between items-start mb-12">
+            <h2 class="text-subtitle md:ext-[50px] uppercase font-arial leading-[normal]">
+                Become <span class="font-times italic lowercase inline">are</span>seller
+            </h2>
+            <button class="hidden md:block w-5" data-close-modal="reseller-modal">
+                <img src="static/svg/close-white.svg" alt="close modal">
+            </button>
+        </div>
+        <form novalidate>
+            <div class="flex flex-col gap-y-2">
+                <input id="reseller_name" type="text" placeholder="name" data-form="reseller-modal"
+                       class="amber-input font-arial">
+                <input id="reseller_surname" type="text" placeholder="surname" data-form="reseller-modal"
+                       class="amber-input font-arial">
+                <input id="reseller_email" type="text" placeholder="email" data-form="reseller-modal"
+                       class="amber-input font-arial">
+                <input id="reseller_phone" type="text" placeholder="phone" data-form="reseller-modal"
+                       class="amber-input font-arial">
+            </div>
 
-<section class="amber-container pt-[60px] pb-[76px] md:py-0">
-    <div class="relative">
+            <div class="pt-5 mb-12 flex">
+                <div class="bg-black relative rounded-full w-5 h-5 flex-shrink-0 border border-white border-[4px] flex items-center justify-center mr-2">
+                    <label for="reseller_policy" class="peer">
+                        <input id="reseller_policy" type="checkbox" class="w-full opacity-0 absolute h-full" checked
+                               data-form="reseller-modal">
+                    </label>
+                    <div class="w-2 h-2 rounded-full peer-has-[:checked]:bg-orange duration-300"></div>
+                </div>
+                <label for="catalog_policy" class="text-[10px] flex items-center">I agree to privacy policy and terms
+                    and
+                    conditions</label>
+            </div>
+            <div class="flex justify-end w-full">
+                <button class="button button-black-hallow max-w-max px-[50px]" data-form-button="reseller-modal">
+                    SUBMIT
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="catalog-modal fixed h-0 opacity-0 pointer-events-none inset-0 z-40 w-full h-full bg-black/60 flex justify-center items-center">
+    <button class="md:hidden w-10 absolute right-4 top-4" data-close-modal="catalog-modal">
+        <img src="static/svg/close-white.svg" alt="close modal">
+    </button>
+    <div class="flex flex-col justify-center h-full md:h-auto bg-black text-white px-7 pt-[25px] pb-7 max-w-[438px] w-full">
+        <div class="flex justify-between items-start mb-12">
+            <h2 class="text-subtitle md:ext-[50px] uppercase font-arial leading-[normal]">
+                Become <span class="font-times italic lowercase inline">are</span>seller
+            </h2>
+            <button class="hidden md:block w-5" data-close-modal="catalog-modal">
+                <img src="static/svg/close-white.svg" alt="close modal">
+            </button>
+        </div>
+        <form novalidate>
+            <div class="flex flex-col gap-y-2">
+                <input id="catalog_name" type="text" placeholder="name" data-form="catalog-modal"
+                       class="amber-input font-arial">
+                <input id="catalog_surname" type="text" placeholder="surname" data-form="catalog-modal"
+                       class="amber-input font-arial">
+                <input id="catalog_email" type="text" placeholder="email" data-form="catalog-modal"
+                       class="amber-input font-arial">
+                <input id="catalog_phone" type="text" placeholder="phone" data-form="catalog-modal"
+                       class="amber-input font-arial">
+            </div>
+
+            <div class="pt-5 mb-12 flex">
+                <div class="bg-black relative rounded-full w-5 h-5 flex-shrink-0 border border-white border-[4px] flex items-center justify-center mr-2">
+                    <label for="catalog_policy" class="peer">
+                        <input id="catalog_policy" type="checkbox" class="w-full opacity-0 absolute h-full" checked
+                               data-form="catalog-modal">
+                    </label>
+                    <div class="w-2 h-2 rounded-full peer-has-[:checked]:bg-orange duration-300"></div>
+                </div>
+                <label for="catalog_policy" class="text-[10px] flex items-center">I agree to privacy policy and terms
+                    and
+                    conditions</label>
+            </div>
+            <div class="flex justify-end w-full">
+                <button class="button button-black-hallow max-w-max px-[50px]" data-form-button="reseller-modal">
+                    SUBMIT
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="terms-modal h-0 opacity-0 fixed pointer-events-none inset-0 z-40 w-full h-full bg-white flex flex-col justify-center items-center">
+    <div class="flex w-full justify-between p-4 md:px-16 md:py-7 items-center">
+        <button class="max-w-[50px] w-full opacity-0 pointer-events-none">
+            <img src="static/svg/shop.svg" alt="basket" class="w-full">
+        </button>
+        <a href="landing.html">
+            <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
+        </a>
+        <button class="max-w-[50px] w-full" data-close-modal="terms-modal">
+            <img src="static/svg/close.svg" alt="close modal">
+        </button>
+    </div>
+    <div class="overflow-y-scroll py-[142px] mx-auto w-full h-full">
+        <div class="max-w-[854px] mx-auto">
+            <div class="mb-6 md:mb-9">
+                <h1 class="font-arial text-subtitle md:text-[64px] uppercase text-center">
+                    TERMS <span class="font-times italic lowercase inline">AND</span>CONDITIONS
+                    <span class="font-times italic lowercase inline">AND</span>PRIVACY POLICY
+                </h1>
+            </div>
+            <p class="text-[15px] leading-[22.5px] font-arial mb-5">
+                The tems are according to General Data Protection Regulation (GDPR) of the European Parliament and the
+                Council, dating back to April 27, 2016. It outlines provisions for the protection of personal data and
+                the
+                free movement of such data. It also refers to the regulations of May 22, 2018.
+            </p>
+
+            <h3 class="font-bold text-[15px] leading-[22.5px] font-arial">Terms and Conditions:</h3>
+            <ol class="mb-5 list-decimal pl-[18px]">
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Acceptance of Terms: By accessing and using the services provided by UAB Amberdam on amberdam.com,
+                    you
+                    agree to abide by these Terms and Conditions.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Data Collection: We collect personal information to offer services via email or phone. By providing
+                    your
+                    information, you consent to its use for this purpose.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    User Eligibility: Users must be at least 16 years old. If you are under 16, you can only provide
+                    data
+                    with parental or guardian consent.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Use of Information: The collected information will be used solely for the purpose of offering
+                    services
+                    and will not be shared with third parties without consent.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Communication: By providing your contact information, you consent to receiving communications from
+                    UAB
+                    Amberdam regarding services via email or phone.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Accuracy of Information: Users are responsible for providing accurate and up-to-date information.
+                    UAB
+                    Amberdam is not liable for any consequences resulting from inaccurate information.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Intellectual Property: All content on amberdam.com, including text, images, and logos, is the
+                    property
+                    of UAB Amberdam and is protected by intellectual property laws.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Limitation of Liability: UAB Amberdam is not liable for any damages or losses resulting from the use
+                    of
+                    its services or website.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Changes to Terms: UAB Amberdam reserves the right to modify these terms at any time. Users are
+                    responsible for reviewing the terms regularly.
+                </li>
+            </ol>
+
+            <h3 class="font-bold text-[15px] leading-[22.5px] font-arial">Privacy Policy:</h3>
+            <ol class="list-decimal pl-[18px]">
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Information Collected: We collect personal information such as name, email, and phone number for the
+                    purpose of providing services.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Use of Information: Collected information is used exclusively for offering services. It will not be
+                    sold
+                    or shared with third parties without explicit consent.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Security Measures: We employ industry-standard security measures to protect your personal
+                    information.
+                    However, no method of transmission over the internet is entirely secure.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Cookies: We may use cookies to enhance user experience. Users can modify browser settings to decline
+                    cookies.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Third-Party Links: Our website may contain links to third-party websites. UAB Amberdam is not
+                    responsible for the privacy practices or content of these sites.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Opt-Out: Users can opt-out of communications by contacting us or using the provided opt-out
+                    mechanisms.
+                </li>
+                <li class="text-[15px] leading-[22.5px] font-arial">
+                    Policy Changes: UAB Amberdam reserves the right to update this Privacy Policy. Users will be
+                    notified of
+                    any changes.
+                </li>
+            </ol>
+        </div>
+
+    </div>
+</div>
+
+<section class="amber-container pt-[60px] pb-[76px] md:pt-[108] md:pb-[209px]">
+    <div class="max-w-[876px] w-full mx-auto">
         <img src="static/images/why-amber.png" alt="amber" class="w-full">
     </div>
 </section>
@@ -122,26 +333,34 @@
 
 <section class="pb-[169px] md:pb-[245px] amber-container">
     <div class="max-w-[829px] mx-auto flex items-center flex-col">
-        <h2 class="font-arial text-subtitle md:text-[64px] uppercase mb-[18px] text-center">
-            BECOME <span class="font-times italic lowercase inline">a</span>RESELLER
-        </h2>
+        <h2 class="font-arial text-subtitle md:text-[64px] uppercase mb-[18px] text-center leading-[normal]">
+            BECOME <span class="font-times italic lowercase inline">a</span>RESELLER</h2>
         <p class="text-[15px] leading-[22.5px] font-arial mb-10 text-center">
-            Embrace the elegance of Black Baltic Sea Amber and elevate your business with a touch of timeless beauty. Join
+            Embrace the elegance of Black Baltic Sea Amber and elevate your business with a touch of timeless beauty.
+            Join
             us on this exciting venture, and let's create lasting impressions together!
         </p>
-        <a href="" class="button button-black max-w-max px-[50px] mx-auto">SIGN UP</a>
+        <a class="button button-black max-w-max px-[50px] mx-auto" data-modal-target="reseller-modal">SIGN UP</a>
     </div>
 </section>
 
 <footer class="py-9 amber-container bg-white flex flex-col justify-center items-center">
     <div class="flex mb-[51px]">
-        <a href="" class="pr-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black">Amber
-            production</a>
-        <a href="" class="px-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black">Privacy policy</a>
-        <a href="" class="pl-5 font-arial text-[10px] leading-[15px] uppercase">Contact us</a>
+        <a href="landing.html#products"
+           class="pr-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black">
+            Amber production
+        </a>
+        <a class="px-5 font-arial text-[10px] leading-[15px] uppercase border-r border-black cursor-pointer"
+           data-modal-target="terms-modal">
+            Privacy policy
+        </a>
+        <a class="pl-5 font-arial text-[10px] leading-[15px] uppercase" data-modal-target="reseller-modal">
+            Contact us
+        </a>
     </div>
     <div class="font-arial text-[10px] leading-[15px] uppercase">AmBERDAM, 2023</div>
 </footer>
 </body>
 </html>
 <script src="js/main.js"></script>
+<script src="js/form.js"></script>

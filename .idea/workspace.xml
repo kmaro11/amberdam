@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd8461dc-9716-47b9-a4b2-1744a8e57cf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/why-amber.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/svg/close-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sustainability.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terms-and-conditions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/why-amber.html" afterDir="false" />
+    <list default="true" id="cd8461dc-9716-47b9-a4b2-1744a8e57cf3" name="Changes" comment="landing(master) start modal">
+      <change afterPath="$PROJECT_DIR$/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/amber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/why-amber.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/why-amber.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/svg/close-white.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/svg/close-white.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sustainability.html" beforeDir="false" afterPath="$PROJECT_DIR$/sustainability.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terms-and-conditions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/why-amber.html" beforeDir="false" afterPath="$PROJECT_DIR$/why-amber.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,8 @@
       <updated>1702982171932</updated>
       <workItem from="1702982173716" duration="649000" />
       <workItem from="1703005210431" duration="8257000" />
-      <workItem from="1703064325797" duration="9747000" />
+      <workItem from="1703064325797" duration="9766000" />
+      <workItem from="1703085009032" duration="11739000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1702982423847</created>
@@ -88,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703013869699</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="landing(master) start modal">
+      <created>1703074614694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703074614694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +107,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="start(master) Fonts" />
     <MESSAGE value="landing(master) middle" />
-    <option name="LAST_COMMIT_MESSAGE" value="landing(master) middle" />
+    <MESSAGE value="landing(master) start modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="landing(master) start modal" />
   </component>
 </project>
