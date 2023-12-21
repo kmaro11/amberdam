@@ -6,14 +6,14 @@ const productsManufactures = document.getElementById('products-manufactures');
 const productButtons = document.querySelectorAll('[data-products-target]');
 const products = document.querySelectorAll('[data-products]');
 
-productButtons.forEach( button => {
+productButtons.forEach(button => {
     button.addEventListener('click', () => {
         removeActiveButtons()
         const selectedProduct = button.dataset.productsTarget
         button.classList.add('active-product')
-        products.forEach( product => {
+        products.forEach(product => {
             const productType = product.dataset.products
-            if(productType === selectedProduct) {
+            if (productType === selectedProduct) {
                 product.classList.remove('hidden')
             } else {
                 product.classList.add('hidden')
@@ -24,13 +24,21 @@ productButtons.forEach( button => {
 
 
 function removeActiveButtons() {
-    productButtons.forEach( button => {
+    productButtons.forEach(button => {
         button.classList.remove('active-product')
     })
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    let slider = new window.Splide('#products-slider', { arrows: false, pagination: false, type: "loop", gap: '87px'});
+    let slider = new window.Splide('#products-slider', {
+        arrows: true,
+        pagination: true,
+        type: "loop",
+        gap: '87px',
+        classes: {
+            page: 'splide__pagination__page custom-pagination-item'
+        }
+    });
     let heightMap = {};
     document.querySelectorAll(".splide__slide").forEach(function (e) {
         e.style.maxHeight = 0;
@@ -53,8 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     slider.mount();
 });
-
-
 
 
 // productSlider && new Splide('#products-slider', {

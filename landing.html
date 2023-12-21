@@ -324,24 +324,24 @@
 <section class="pb-[120px] md:pb-[140px]">
     <div class="amber-container">
         <div class="mb-12 border-b border-black w-full flex md:justify-end gap-x-3 pb-[22px] md:pb-3">
-            <button class="amber-product-button active-product"
-                    data-products-target="products">
-                Products
-            </button>
-            <button class="amber-product-button"
-                    data-products-target="manufactures">
-                Semimanufactures
-            </button>
-            <button class="amber-product-button"
-                    data-products-target="material">
-                Raw material
-            </button>
+<!--            <button class="amber-product-button active-product"-->
+<!--                    data-products-target="products">-->
+<!--                Products-->
+<!--            </button>-->
+<!--            <button class="amber-product-button"-->
+<!--                    data-products-target="manufactures">-->
+<!--                Semimanufactures-->
+<!--            </button>-->
+<!--            <button class="amber-product-button"-->
+<!--                    data-products-target="material">-->
+<!--                Raw material-->
+<!--            </button>-->
         </div>
     </div>
     <div class="mx-4">
         <div class="max-w-[1307px] w-full mx-auto">
             <div data-products="products" class="w-full">
-                <div class="splide hidden lg:block" id="products-slider">
+                <div class="splide hidden lg:block relative " id="products-slider">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -863,7 +863,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="relative mt-[66px] md:mt-[90px]">
+                    <div class="absolute top-full mt-[66px] md:mt-[90px] w-full">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev w-[25px]">
                                 <img src="static/svg/arrow-left.svg" alt="arrow-left">
