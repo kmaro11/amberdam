@@ -138,6 +138,7 @@
 @media (max-width: 640px) {
     .amber-product-button {
         font-size: 12px;
+        padding: 0 15px;
     }
 }
 
@@ -180,5 +181,9 @@
 }
 .splide__arrow--next {
     right: 0;
+}
+
+.splide__pagination li:nth-child(n+7) {
+    display:none;
 }
 

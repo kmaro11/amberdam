@@ -323,7 +323,7 @@
 </section>
 <section class="pb-[120px] md:pb-[140px]">
     <div class="amber-container">
-        <div class="mb-12 border-b border-black w-full flex md:justify-end gap-x-3 pb-[22px] md:pb-3">
+        <div class="mb-12 border-b border-black w-full hidden lg:flex md:justify-end gap-x-3 pb-[22px] md:pb-3">
             <button class="amber-product-button active-product"
                     data-products-target="0">
                 Products
@@ -337,11 +337,25 @@
                 Raw material
             </button>
         </div>
+        <div class="mb-12 border-b border-black w-full flex md:justify-end gap-x-3 pb-[22px] md:pb-3">
+            <button class="amber-product-button active-product"
+                    data-products-mobile-target="0,1,2,3,4,5,6,7,8">
+                Products
+            </button>
+            <button class="amber-product-button"
+                    data-products-mobile-target="9,10,11,12,13,14">
+                Semimanufactures
+            </button>
+            <button class="amber-product-button"
+                    data-products-mobile-target="15,16,17">
+                Raw material
+            </button>
+        </div>
     </div>
     <div class="mx-4">
         <div class="max-w-[1307px] w-full mx-auto">
-            <div data-products="products" class="w-full">
-                <div class="splide hidden lg:block relative " id="products-slider">
+            <div class="hidden lg:block w-full">
+                <div class="splide relative " id="products-slider">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -875,763 +889,569 @@
                         <ul class="splide__pagination relative"></ul>
                     </div>
                 </div>
-
             </div>
-<!--            <div data-products="manufactures" class="hidden w-full">-->
-<!--                <div class="hidden lg:grid grid-cols-3 gap-x-[87px] gap-y-[50px]">-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/black-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Calibrated black baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Calibrated cherry baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Calibrated natural baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Non calibrated black baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Non calibrated black baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="w-full">-->
-<!--                        <div class="mb-5 w-full">-->
-<!--                            <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">-->
-<!--                        </div>-->
-<!--                        <div class="mb-[17px]">-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                Non calibrated black baltic amber beads-->
-<!--                            </div>-->
-<!--                            <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center justify-between">-->
-<!--                            <div class="flex flex-col gap-[6px]">-->
-<!--                                <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                    Wholesale price-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                            <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                <button class="button button-black max-w-max px-[46px]"-->
-<!--                                        data-modal-target="catalog-modal">-->
-<!--                                    ASK-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="splide lg:hidden" id="products-manufactures">-->
-<!--                    <div class="splide__track">-->
-<!--                        <ul class="splide__list">-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/black-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Calibrated black baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Calibrated cherry baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Calibrated natural baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Non calibrated black baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Non calibrated black baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Non calibrated black baltic amber beads-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="relative mt-[66px] md:mt-[90px] lg:hidden">-->
-<!--                        <div class="splide__arrows">-->
-<!--                            <button class="splide__arrow splide__arrow&#45;&#45;prev w-[25px]">-->
-<!--                                <img src="static/svg/arrow-left.svg" alt="arrow-left">-->
-<!--                            </button>-->
-<!--                            <button class="splide__arrow splide__arrow&#45;&#45;next w-[25px]">-->
-<!--                                <img src="static/svg/arrow-right.svg" alt="arrow-right">-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                        <ul class="splide__pagination relative"></ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div data-products="material" class="hidden w-full">-->
-<!--                <div class="splide" id="products-material">-->
-<!--                    <div class="splide__track">-->
-<!--                        <ul class="splide__list">-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/materials/natural.png" alt="natural" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Baltic amber pressed brick raw material natural-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/materials/cherry.png" alt="cherry" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Baltic amber pressed brick raw material cherry-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="splide__slide">-->
-<!--                                <div class="w-full">-->
-<!--                                    <div class="mb-5 w-full">-->
-<!--                                        <img src="static/materials/black.png" alt="black" class="w-full">-->
-<!--                                    </div>-->
-<!--                                    <div class="mb-[17px]">-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            Baltic amber pressed brick raw material black-->
-<!--                                        </div>-->
-<!--                                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                                            1 kg-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex items-center justify-between">-->
-<!--                                        <div class="flex flex-col gap-[6px]">-->
-<!--                                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                                Wholesale price-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                                    data-modal-target="catalog-modal">-->
-<!--                                                ASK-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="relative mt-[66px] md:mt-[90px] lg:hidden">-->
-<!--                        <div class="splide__arrows">-->
-<!--                            <button class="splide__arrow splide__arrow&#45;&#45;prev w-[25px]">-->
-<!--                                <img src="static/svg/arrow-left.svg" alt="arrow-left">-->
-<!--                            </button>-->
-<!--                            <button class="splide__arrow splide__arrow&#45;&#45;next w-[25px]">-->
-<!--                                <img src="static/svg/arrow-right.svg" alt="arrow-right">-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                        <ul class="splide__pagination relative"></ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="lg:hidden w-full">
+                <div class="splide" id="products-slider-mobile">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-1.png" alt="product-1" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Black Baltic amber bracelet with white amber bead
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">35,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-2.png" alt="product-2" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Black Baltic amber bracelet with natural amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">38,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-3.png" alt="product-3" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Black Baltic amber bracelet with natural amber bead
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg  package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">39,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-4.png" alt="product-4" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Black Baltic amber bracelet with natural amber bead
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg  package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">35,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-5.png" alt="product-5" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Amber stud Earrings with gold plated silver
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg  package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">19,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-6.png" alt="product-6" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Amber stud Earrings with gold plated silver
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg  package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">11,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-7.png" alt="product-7" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Black Baltic amber bracelet
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg  package
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">29,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-1.png" alt="product-1" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Baltic amber raw material
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg from 8mm to 11mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">Retail price</p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">Wholesale
+                                                price</p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">45,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/products/product-9.png" alt="product-9" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Natural amber pet necklace(repellant)
+
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg package, sizes differ
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Retail price(PPP)
+                                            </p>
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <div class="font-arial font-bold text-xl">19,00 EUR</div>
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/black-beads-calibrated.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Calibrated black baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Calibrated cherry baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Calibrated natural baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 10, 12, 14, 16, 18, 20, 22mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Non calibrated black baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Non calibrated black baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Non calibrated black baltic amber beads
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg, 11, 13, 15, 17, 19, 21, 23mm size
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/materials/natural.png" alt="natural" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Baltic amber pressed brick raw material natural
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/materials/cherry.png" alt="cherry" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Baltic amber pressed brick raw material cherry
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="w-full">
+                                    <div class="mb-5 w-full">
+                                        <img src="static/materials/black.png" alt="black" class="w-full">
+                                    </div>
+                                    <div class="mb-[17px]">
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            Baltic amber pressed brick raw material black
+                                        </div>
+                                        <div class="text-[15px] leading-[22.5px] font-arial">
+                                            1 kg
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col gap-[6px]">
+                                            <p class="text-[15px] leading-[22.5px] font-times italic">
+                                                Wholesale price
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-end gap-[6px]">
+                                            <button class="button button-black max-w-max px-[46px]"
+                                                    data-modal-target="catalog-modal">
+                                                ASK
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative mt-[66px] md:mt-[90px]">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev w-[25px]">
+                                <img src="static/svg/arrow-left.svg" alt="arrow-left">
+                            </button>
+                            <button class="splide__arrow splide__arrow--next w-[25px]">
+                                <img src="static/svg/arrow-right.svg" alt="arrow-right">
+                            </button>
+                        </div>
+                        <ul class="splide__pagination relative"></ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-<!--<div class="splide lg:hidden" id="products-slider-mobile">-->
-<!--    <div class="splide__track">-->
-<!--        <ul class="splide__list">-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-1.png" alt="product-1" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Black Baltic amber bracelet with white amber bead-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">35,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-2.png" alt="product-2" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Black Baltic amber bracelet with natural amber beads-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">38,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-3.png" alt="product-3" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Black Baltic amber bracelet with natural amber bead-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg  package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">39,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-4.png" alt="product-4" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Black Baltic amber bracelet with natural amber bead-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg  package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">35,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-5.png" alt="product-5" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Amber stud Earrings with gold plated silver-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg  package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">19,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-6.png" alt="product-6" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Amber stud Earrings with gold plated silver-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg  package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">11,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-7.png" alt="product-7" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Black Baltic amber bracelet-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg  package-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">29,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-1.png" alt="product-1" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Baltic amber raw material-->
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg from 8mm to 11mm size-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">Retail price</p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">Wholesale-->
-<!--                                price</p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">45,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="splide__slide">-->
-<!--                <div class="w-full">-->
-<!--                    <div class="mb-5 w-full">-->
-<!--                        <img src="static/products/product-9.png" alt="product-9" class="w-full">-->
-<!--                    </div>-->
-<!--                    <div class="mb-[17px]">-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            Natural amber pet necklace(repellant)-->
-
-<!--                        </div>-->
-<!--                        <div class="text-[15px] leading-[22.5px] font-arial">-->
-<!--                            1 kg package, sizes differ-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="flex items-center justify-between">-->
-<!--                        <div class="flex flex-col gap-[6px]">-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Retail price(PPP)-->
-<!--                            </p>-->
-<!--                            <p class="text-[15px] leading-[22.5px] font-times italic">-->
-<!--                                Wholesale price-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                        <div class="flex flex-col items-end gap-[6px]">-->
-<!--                            <div class="font-arial font-bold text-xl">19,00 EUR</div>-->
-<!--                            <button class="button button-black max-w-max px-[46px]"-->
-<!--                                    data-modal-target="catalog-modal">-->
-<!--                                ASK-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--    <div class="relative mt-[66px] md:mt-[90px]">-->
-<!--        <div class="splide__arrows">-->
-<!--            <button class="splide__arrow splide__arrow&#45;&#45;prev w-[25px]">-->
-<!--                <img src="static/svg/arrow-left.svg" alt="arrow-left">-->
-<!--            </button>-->
-<!--            <button class="splide__arrow splide__arrow&#45;&#45;next w-[25px]">-->
-<!--                <img src="static/svg/arrow-right.svg" alt="arrow-right">-->
-<!--            </button>-->
-<!--        </div>-->
-<!--        <ul class="splide__pagination relative"></ul>-->
-<!--    </div>-->
-<!--</div>-->
 
 <section class="amber-container pb-[182px] md:pb-[311px]">
     <div class="relative w-full flex flex-col md:flex-row md:justify-between md:items-end gap-x-10 pr-[182px] border-b border-black pb-10 md:pb-[17px]">
