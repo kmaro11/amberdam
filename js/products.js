@@ -1,35 +1,20 @@
-const productSlider = document.getElementById('products-slider');
-const productSliderMobile = document.getElementById('products-slider-mobile');
-const productsMaterial = document.getElementById('products-material');
-const productsManufactures = document.getElementById('products-manufactures');
-
-const productButtons = document.querySelectorAll('[data-products-target]');
-const products = document.querySelectorAll('[data-products]');
-
-productButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        removeActiveButtons()
-        const selectedProduct = button.dataset.productsTarget
-        button.classList.add('active-product')
-        products.forEach(product => {
-            const productType = product.dataset.products
-            if (productType === selectedProduct) {
-                product.classList.remove('hidden')
-            } else {
-                product.classList.add('hidden')
-            }
-        })
-    })
-})
-
-
-function removeActiveButtons() {
-    productButtons.forEach(button => {
-        button.classList.remove('active-product')
-    })
-}
-
 document.addEventListener("DOMContentLoaded", function () {
+    const productSlider = document.getElementById('products-slider');
+    const productBlock = document.getElementById('products');
+    const productSliderMobile = document.getElementById('products-slider-mobile');
+    const productsMaterial = document.getElementById('products-material');
+    const productsManufactures = document.getElementById('products-manufactures');
+
+    const productButtons = document.querySelectorAll('[data-products-target]');
+    const products = document.querySelectorAll('[data-products]');
+    let activeSliderIndex = 0;
+
+    function removeActiveButtons() {
+        productButtons.forEach(button => {
+            button.classList.remove('active-product')
+        })
+    }
+
     let slider = new window.Splide('#products-slider', {
         arrows: true,
         pagination: true,
@@ -59,6 +44,33 @@ document.addEventListener("DOMContentLoaded", function () {
         e.slide.style.maxHeight = maxHeight;
         e.slide.parentElement.style.maxHeight = maxHeight;
     });
+
+    slider.on("move", function (e) {
+        activeSliderIndex = e
+        changeActiveButton()
+        productBlock.scrollIntoView()
+    })
+
+    productButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            removeActiveButtons()
+            const selectedProduct = button.dataset.productsTarget
+            button.classList.add('active-product')
+            slider.go(parseInt(selectedProduct))
+        })
+    })
+
+    function changeActiveButton() {
+        productButtons.forEach(button => {
+            if (parseInt(button.dataset.productsTarget) === activeSliderIndex) {
+                button.classList.add('active-product')
+            } else {
+                button.classList.remove('active-product')
+            }
+        })
+    }
+
+
     slider.mount();
 });
 
