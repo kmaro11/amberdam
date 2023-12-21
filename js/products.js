@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const productBlock = document.getElementById('products');
     const productMobileButtons = document.querySelectorAll('[data-products-mobile-target]');
-
+    const paginationWrapper = document.querySelector('.splide__pagination-custom');
     const productButtons = document.querySelectorAll('[data-products-target]');
     let activeSliderIndex = 0;
     const isMobile = window.matchMedia('(max-width: 1024px)').matches;
@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         sliderMobile.on("move", function (e) {
             activeSliderIndex = e
+            paginationWrapper.style.transform = `translateX(-${e * 21}px)`
             productMobileButtons.forEach(button => {
                 const selectedProduct = button.dataset.productsMobileTarget.split(',')
                 if (selectedProduct.includes(activeSliderIndex.toString())) {
@@ -89,13 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
 
-        // sliderMobile.on( 'pagination:updated', function ( data ) {
-        //     data.items.forEach((item, index) => {
-        //         console.log(item.button.parentElement)
-        //         console.log(item.button.classList.contains('is-active'))
-        //     })
-        //     console.log(data.items)
-        // } );
+        sliderMobile.on( 'pagination:updated', function ( data ) {
+
+            console.log(data.items)
+        } );
 
         productMobileButtons.forEach(button => {
             button.addEventListener('click', () => {
