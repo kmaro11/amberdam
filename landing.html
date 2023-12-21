@@ -32,9 +32,9 @@
     </div>
     <div class="amber-menu duration-300 inset-0 w-full h-full bg-white" data-menu>
         <div class="flex justify-between p-4 md:px-16 md:py-7 items-center">
-            <button class="max-w-[50px] w-full">
+            <a href="#products" class="max-w-[50px] w-full" data-product-button>
                 <img src="static/svg/shop.svg" alt="basket" class="w-full">
-            </button>
+            </a>
             <a href="landing.html" class="max-w-[157px] w-full flex">
                 <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="w-full">
             </a>
@@ -110,9 +110,9 @@
                     </label>
                     <div class="w-2 h-2 rounded-full peer-has-[:checked]:bg-orange duration-300"></div>
                 </div>
-                <label for="catalog_policy" class="text-[10px] flex items-center">I agree to privacy policy and terms
-                    and
-                    conditions</label>
+                <a class="text-[10px] flex items-center cursor-pointer" data-modal-target="terms-modal">
+                    I agree to privacy policy and terms and conditions
+                </a>
             </div>
             <div class="flex justify-end w-full">
                 <button class="button button-black-hallow max-w-max px-[50px]" data-form-button="reseller-modal">
@@ -155,9 +155,9 @@
                     </label>
                     <div class="w-2 h-2 rounded-full peer-has-[:checked]:bg-orange duration-300"></div>
                 </div>
-                <label for="catalog_policy" class="text-[10px] flex items-center">I agree to privacy policy and terms
-                    and
-                    conditions</label>
+                <a class="text-[10px] flex items-center cursor-pointer" data-modal-target="terms-modal">
+                    I agree to privacy policy and terms and conditions
+                </a>
             </div>
             <div class="flex justify-end w-full">
                 <button class="button button-black-hallow max-w-max px-[50px]" data-form-button="reseller-modal">
@@ -167,7 +167,7 @@
         </form>
     </div>
 </div>
-<div class="terms-modal h-0 opacity-0 fixed pointer-events-none inset-0 z-40 w-full h-full bg-white flex flex-col justify-center items-center">
+<div class="terms-modal h-0 opacity-0 fixed pointer-events-none inset-0 z-50 w-full h-full bg-white flex flex-col justify-center items-center">
     <div class="flex w-full justify-between p-4 md:px-16 md:py-7 items-center">
         <button class="max-w-[50px] w-full opacity-0 pointer-events-none">
             <img src="static/svg/shop.svg" alt="basket" class="w-full">
@@ -429,7 +429,7 @@
                                                 Black Baltic amber bracelet with natural amber bead
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -459,7 +459,7 @@
                                                 Black Baltic amber bracelet with natural amber bead
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -489,7 +489,7 @@
                                                 Amber stud Earrings with gold plated silver
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -519,7 +519,7 @@
                                                 Amber stud Earrings with gold plated silver
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -549,7 +549,7 @@
                                                 Black Baltic amber bracelet
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -579,7 +579,7 @@
                                                 Black Baltic amber necklace with custom metal cube
                                             </div>
                                             <div class="text-[15px] leading-[22.5px] font-arial">
-                                                1 kg  package
+                                                1 kg package
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-between">
@@ -637,7 +637,8 @@
                                 <div class="grid grid-cols-3 gap-x-[87px] gap-y-[50px]">
                                     <div class="w-full">
                                         <div class="mb-5 w-full">
-                                            <img src="static/manufactures/black-beads-calibrated.png" alt="beads" class="w-full">
+                                            <img src="static/manufactures/black-beads-calibrated.png" alt="beads"
+                                                 class="w-full">
                                         </div>
                                         <div class="mb-[17px]">
                                             <div class="text-[15px] leading-[22.5px] font-arial">
@@ -663,7 +664,8 @@
                                     </div>
                                     <div class="w-full">
                                         <div class="mb-5 w-full">
-                                            <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                            <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads"
+                                                 class="w-full">
                                         </div>
                                         <div class="mb-[17px]">
                                             <div class="text-[15px] leading-[22.5px] font-arial">
@@ -715,7 +717,8 @@
                                     </div>
                                     <div class="w-full">
                                         <div class="mb-5 w-full">
-                                            <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads" class="w-full">
+                                            <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads"
+                                                 class="w-full">
                                         </div>
                                         <div class="mb-[17px]">
                                             <div class="text-[15px] leading-[22.5px] font-arial">
@@ -741,7 +744,8 @@
                                     </div>
                                     <div class="w-full">
                                         <div class="mb-5 w-full">
-                                            <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                            <img src="static/manufactures/chery-beads-non-calibrated.png" alt="beads"
+                                                 class="w-full">
                                         </div>
                                         <div class="mb-[17px]">
                                             <div class="text-[15px] leading-[22.5px] font-arial">
@@ -767,7 +771,7 @@
                                     </div>
                                     <div class="w-full">
                                         <div class="mb-5 w-full">
-                                            <img src="static/manufactures/natural-beads.png" alt="beads" class="w-full">
+                                            <img src="static/manufactures/natural-beads-non-calibrated.png" alt="beads" class="w-full">
                                         </div>
                                         <div class="mb-[17px]">
                                             <div class="text-[15px] leading-[22.5px] font-arial">
@@ -877,7 +881,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="absolute top-full mt-[66px] md:mt-[90px] w-full">
+                    <div class="relative mt-[66px] md:mt-[90px] w-full">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev w-[25px]">
                                 <img src="static/svg/arrow-left.svg" alt="arrow-left">
@@ -968,7 +972,7 @@
                                             Black Baltic amber bracelet with natural amber bead
                                         </div>
                                         <div class="text-[15px] leading-[22.5px] font-arial">
-                                            1 kg  package
+                                            1 kg package
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
@@ -1000,7 +1004,7 @@
                                             Black Baltic amber bracelet with natural amber bead
                                         </div>
                                         <div class="text-[15px] leading-[22.5px] font-arial">
-                                            1 kg  package
+                                            1 kg package
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
@@ -1032,7 +1036,7 @@
                                             Amber stud Earrings with gold plated silver
                                         </div>
                                         <div class="text-[15px] leading-[22.5px] font-arial">
-                                            1 kg  package
+                                            1 kg package
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
@@ -1064,7 +1068,7 @@
                                             Amber stud Earrings with gold plated silver
                                         </div>
                                         <div class="text-[15px] leading-[22.5px] font-arial">
-                                            1 kg  package
+                                            1 kg package
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
@@ -1096,7 +1100,7 @@
                                             Black Baltic amber bracelet
                                         </div>
                                         <div class="text-[15px] leading-[22.5px] font-arial">
-                                            1 kg  package
+                                            1 kg package
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
@@ -1184,7 +1188,8 @@
                             <li class="splide__slide">
                                 <div class="w-full">
                                     <div class="mb-5 w-full">
-                                        <img src="static/manufactures/black-beads-calibrated.png" alt="beads" class="w-full">
+                                        <img src="static/manufactures/black-beads-calibrated.png" alt="beads"
+                                             class="w-full">
                                     </div>
                                     <div class="mb-[17px]">
                                         <div class="text-[15px] leading-[22.5px] font-arial">
@@ -1212,7 +1217,8 @@
                             <li class="splide__slide">
                                 <div class="w-full">
                                     <div class="mb-5 w-full">
-                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads"
+                                             class="w-full">
                                     </div>
                                     <div class="mb-[17px]">
                                         <div class="text-[15px] leading-[22.5px] font-arial">
@@ -1268,7 +1274,8 @@
                             <li class="splide__slide">
                                 <div class="w-full">
                                     <div class="mb-5 w-full">
-                                        <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads" class="w-full">
+                                        <img src="static/manufactures/black-beads-non-calibrated.png" alt="beads"
+                                             class="w-full">
                                     </div>
                                     <div class="mb-[17px]">
                                         <div class="text-[15px] leading-[22.5px] font-arial">
@@ -1296,7 +1303,8 @@
                             <li class="splide__slide">
                                 <div class="w-full">
                                     <div class="mb-5 w-full">
-                                        <img src="static/manufactures/cherry-beads-calibrated.png" alt="beads" class="w-full">
+                                        <img src="static/manufactures/chery-beads-non-calibrated.png" alt="beads"
+                                             class="w-full">
                                     </div>
                                     <div class="mb-[17px]">
                                         <div class="text-[15px] leading-[22.5px] font-arial">
@@ -1437,7 +1445,6 @@
                         </ul>
                     </div>
                     <div class="relative mt-[66px] md:mt-[90px]">
-
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev w-[25px]">
                                 <img src="static/svg/arrow-left.svg" alt="arrow-left">
@@ -1520,7 +1527,8 @@
            data-modal-target="terms-modal">
             Privacy policy
         </a>
-        <a class="pl-5 font-arial text-[10px] leading-[15px] uppercase cursor-pointer" data-modal-target="reseller-modal">
+        <a class="pl-5 font-arial text-[10px] leading-[15px] uppercase cursor-pointer"
+           data-modal-target="reseller-modal">
             Contact us
         </a>
     </div>

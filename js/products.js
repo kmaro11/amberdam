@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const paginationWrapper = document.querySelector('.splide__pagination-custom');
     const productButtons = document.querySelectorAll('[data-products-target]');
     let activeSliderIndex = 0;
-    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+    let isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
     // desktop slider
     if (!isMobile) {
@@ -63,9 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gap: '87px',
             breakpoints: {
                 1024: {
-                    perPage: 3,
-                },
-                768: {
                     perPage: 2,
                 },
                 500: {
@@ -89,11 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             })
         })
-
-        sliderMobile.on( 'pagination:updated', function ( data ) {
-
-            console.log(data.items)
-        } );
 
         productMobileButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -123,3 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 })
+
