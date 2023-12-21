@@ -187,12 +187,12 @@
     max-width: 126px;
     height: 21px;
     overflow: hidden;
-    transition: all .3s;
 }
 .splide__pagination.splide__pagination-custom {
     flex-wrap: unset;
     display: flex;
     justify-content: start;
+    transition: all .3s;
 }
 .splide__pagination.splide__pagination-custom li:nth-child(n+7) {
     /*display:none;*/
