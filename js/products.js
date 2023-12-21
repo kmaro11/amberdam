@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
     // desktop slider
-    console.log(isMobile)
-
     if (!isMobile) {
         let slider = new window.Splide('#products-slider', {
             arrows: true,
@@ -33,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
         slider.on("active", function (e) {
-            // Or index if not loop
-            // let maxHeight = heightMap[e.index] + "px";
             let maxHeight = heightMap[e.slideIndex] + "px";
             e.slide.style.maxHeight = maxHeight;
             e.slide.parentElement.style.maxHeight = maxHeight;
@@ -83,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         sliderMobile.on("move", function (e) {
             activeSliderIndex = e
-
             productMobileButtons.forEach(button => {
                 const selectedProduct = button.dataset.productsMobileTarget.split(',')
                 if (selectedProduct.includes(activeSliderIndex.toString())) {
@@ -93,6 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             })
         })
+
+        // sliderMobile.on( 'pagination:updated', function ( data ) {
+        //     data.items.forEach((item, index) => {
+        //         console.log(item.button.parentElement)
+        //         console.log(item.button.classList.contains('is-active'))
+        //     })
+        //     console.log(data.items)
+        // } );
 
         productMobileButtons.forEach(button => {
             button.addEventListener('click', () => {

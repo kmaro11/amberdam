@@ -183,7 +183,7 @@
     right: 0;
 }
 
-.splide__pagination li:nth-child(n+7) {
+.splide__pagination.splide__pagination-custom li:nth-child(n+7) {
     display:none;
 }
 
