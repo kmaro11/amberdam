@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd8461dc-9716-47b9-a4b2-1744a8e57cf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <workItem from="1702982173716" duration="649000" />
       <workItem from="1703005210431" duration="8257000" />
       <workItem from="1703064325797" duration="9766000" />
-      <workItem from="1703085009032" duration="23632000" />
+      <workItem from="1703085009032" duration="24863000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1702982423847</created>
@@ -102,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703161354000</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="landing(master) testing">
+      <created>1703166801777</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703166801777</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +122,7 @@
     <MESSAGE value="landing(master) start modal" />
     <MESSAGE value="landing(master) left landing and testing" />
     <MESSAGE value="landing(master) products" />
-    <option name="LAST_COMMIT_MESSAGE" value="landing(master) products" />
+    <MESSAGE value="landing(master) testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="landing(master) testing" />
   </component>
 </project>
