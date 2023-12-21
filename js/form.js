@@ -29,7 +29,6 @@ formCloseButton.forEach(button => {
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         const formType = button.dataset.modalTarget
-        console.log('formType', formType)
         const modal = document.querySelector(`.${formType}`)
         toggleModal(modal)
     })
