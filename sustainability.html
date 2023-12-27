@@ -17,28 +17,28 @@
 <body>
 
 <!--header-->
-<header class="absolute w-max left-1/2 -translate-x-1/2 p-4 md:px-16 md:py-7 z-20 w-full flex justify-center items-center h-[82px] md:h-[122px]">
+<header class="absolute w-max left-1/2 -translate-x-1/2 p-4 md:px-16 md:py-7 z-20 w-full flex justify-center items-center h-[82px] md:h-[106px]">
     <a href="landing.html">
         <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
     </a>
 </header>
-<nav class="md:sticky md:top-0 z-30">
+<nav class="md:pointer-events-none md:sticky md:top-0 z-30">
     <div class="flex justify-between p-4 md:px-16 md:py-7 items-center">
-        <a href="landing.html#products" class="max-w-[50px] w-full">
+        <a href="landing.html#products" class="max-w-[50px] w-full pointer-events-auto">
             <img src="static/svg/shop.svg" alt="basket" class="w-full">
         </a>
 
-        <button class="max-w-[50px] w-full" data-open-menu>
+        <button class="max-w-[50px] w-full pointer-events-auto" data-open-menu>
             <img src="static/svg/menu.svg" alt="menu" class="w-full">
         </button>
     </div>
-    <div class="amber-menu duration-300 inset-0 z-10 w-full h-full bg-white" data-menu>
+    <div class="amber-menu duration-300 inset-0 w-full h-full bg-white" data-menu>
         <div class="flex justify-between p-4 md:px-16 md:py-7 items-center">
-            <button class="max-w-[50px] w-full">
+            <a href="landing.html#products" class="max-w-[50px] w-full" data-product-button>
                 <img src="static/svg/shop.svg" alt="basket" class="w-full">
-            </button>
-            <a href="landing.html">
-                <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="max-w-[157px] w-full">
+            </a>
+            <a href="landing.html" class="max-w-[157px] w-full flex">
+                <img src="static/svg/amberdam.svg" alt="Amberdam logo" class="w-full">
             </a>
             <button class="max-w-[50px] w-full" data-open-menu>
                 <img src="static/svg/close.svg" alt="close menu" class="w-full">
@@ -49,7 +49,8 @@
             <div class="w-full lg:w-1/2 flex-grow-1 md:border-l border-black text-black px-4 md:px-16 lg:pl-[10%] ">
                 <ul class="mb-[73px] md:mb-[121px]">
                     <li class="mb-8">
-                        <a href="landing.html#products" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Products</a>
+                        <a href="landing.html#products"
+                           class="text-mobileSubtitle md:text-subtitle uppercase font-arial">Products</a>
                     </li>
                     <li class="mb-8">
                         <a href="about-us.html" class="text-mobileSubtitle md:text-subtitle uppercase font-arial">
