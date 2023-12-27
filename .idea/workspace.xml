@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd8461dc-9716-47b9-a4b2-1744a8e57cf3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
       <workItem from="1703005210431" duration="8257000" />
       <workItem from="1703064325797" duration="9766000" />
       <workItem from="1703085009032" duration="38768000" />
-      <workItem from="1703670640442" duration="88000" />
+      <workItem from="1703670640442" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1702982423847</created>
@@ -194,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703190339267</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="landing(master) removed retail price">
+      <created>1703670789810</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703670789810</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +217,7 @@
     <MESSAGE value="landing(master) custom pagination" />
     <MESSAGE value="landing(master) bug fixes" />
     <MESSAGE value="landing(master) favicons" />
-    <option name="LAST_COMMIT_MESSAGE" value="landing(master) favicons" />
+    <MESSAGE value="landing(master) removed retail price" />
+    <option name="LAST_COMMIT_MESSAGE" value="landing(master) removed retail price" />
   </component>
 </project>
